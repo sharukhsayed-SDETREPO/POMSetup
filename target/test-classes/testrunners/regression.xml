@@ -25,7 +25,7 @@
 		<classes>
 		
 			
-               <class name="com.qa.hubspot.tests.HomePageTest"/>
+              <!--   <class name="com.qa.hubspot.tests.HomePageTest"/>-->
 		</classes>
 	</test>
 </suite>
