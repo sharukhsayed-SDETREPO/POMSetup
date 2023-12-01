@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 79.733 s <<< FAILURE! - in TestSuite
-verfyLoggedInAccount(com.qa.hubspot.tests.HomePageTest)  Time elapsed: 20.395 s  <<< FAILURE!
-java.lang.NullPointerException
-	at com.qa.hubspot.tests.HomePageTest.verfyLoggedInAccount(HomePageTest.java:55)
-
