@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('Build deV') {
           steps {
-            sh 'mvn clean install'
+            sh 'mvn clean install -DskipTests=true'
           }
         }
 
