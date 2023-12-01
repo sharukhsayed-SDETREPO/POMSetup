@@ -1,61 +1,54 @@
 pipeline {
   agent any
   stages {
+    stage('Build DEV') {
+      parallel {
+        stage('Build deV') {
+          steps {
+            sh 'mvn compile'
+          }
+        }
+
+        stage('run test on dev') {
+          steps {
+            sh 'mvn test -Denv=dev'
+          }
+        }
+
+      }
+    }
+
     stage('Build QA') {
       parallel {
         stage('Build QA') {
           steps {
-            echo 'Run on QA'
+            sh 'mvn compile'
           }
         }
 
-        stage('chrome') {
+        stage('run test on qa') {
           steps {
-            echo 'Building on chrome'
-          }
-        }
-
-        stage('edge') {
-          steps {
-            echo 'build on edge'
+            sh 'mvn test -Denv=qa'
           }
         }
 
       }
     }
 
-    stage('Run on QA') {
+    stage('Build stage') {
       parallel {
-        stage('Run on QA') {
+        stage('Build stage') {
           steps {
-            echo 'Run QA'
+            sh 'mvn compile'
           }
         }
 
-        stage('Run on chrome') {
+        stage('run test on stage') {
           steps {
-            echo 'Run on chrome'
+            sh 'mvn test -Denv=stage'
           }
         }
 
-        stage('run on edge') {
-          steps {
-            echo 'Run on edge'
-          }
-        }
-
-      }
-    }
-
-    stage('Run on stage') {
-      steps {
-        echo 'stage execution'
-      }
-    }
-
-    stage('Run on PROD') {
-      steps {
-        echo 'Run on PROD'
       }
     }
 
