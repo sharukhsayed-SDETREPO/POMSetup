@@ -28,7 +28,7 @@ pipeline {
       parallel {
         stage('Run on QA') {
           steps {
-            sh 'echo \'Run on QA\''
+            echo 'Run QA'
           }
         }
 
