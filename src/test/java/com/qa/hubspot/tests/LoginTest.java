@@ -36,7 +36,7 @@ public class LoginTest extends BaseTest {
 
 	@Test(priority=3)
 	public void GetTitleTest() {
-		
+		System.out.println("Verify title test");
 		Assert.assertEquals(loginpageclass.doLoginPageGetTitle(),Constants.LOGIN_PAGE_TITLE);
 	}
 	
@@ -45,6 +45,7 @@ public class LoginTest extends BaseTest {
 	@Severity(SeverityLevel.MINOR)
 	@Test(priority=2)
 	public void VerifySignupLink() {
+		System.out.println("Verfy Signuplink test is running");
 		Assert.assertEquals(loginpageclass.verifySignUp(), true);
 	}
 	
@@ -52,6 +53,7 @@ public class LoginTest extends BaseTest {
 	@Severity(SeverityLevel.BLOCKER)
 	@Test(priority=4)
 	public void DOLogin() {
+		System.out.println("Void method for login without any validations");
 		loginpageclass.doLogin(prop.getProperty("username"), prop.getProperty("pasword"));
 	} 
 	
