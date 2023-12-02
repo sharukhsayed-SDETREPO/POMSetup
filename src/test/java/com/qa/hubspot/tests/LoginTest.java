@@ -54,6 +54,7 @@ public class LoginTest extends BaseTest {
 	@Severity(SeverityLevel.BLOCKER)
 	@Test(priority=4)
 	public void DOLogin() {
+		System.out.println("Verfy LOGIN test is running");
 		loginpageclass.doLogin(prop.getProperty("username"), prop.getProperty("pasword"));
 	} 
 	
