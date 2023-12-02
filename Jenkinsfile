@@ -36,8 +36,19 @@ pipeline {
     }
 
     stage('Build stage') {
-      steps {
-        sh 'mvn compile'
+      parallel {
+        stage('Build stage') {
+          steps {
+            sh 'mvn compile'
+          }
+        }
+
+        stage('no env run') {
+          steps {
+            sh 'mvn test'
+          }
+        }
+
       }
     }
 
