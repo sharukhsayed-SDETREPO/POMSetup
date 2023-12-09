@@ -31,11 +31,7 @@ public class BasePage {
 	public static ThreadLocal<WebDriver> TLDriver= new ThreadLocal<WebDriver>();
 	
 	
-	/**
-	 * This method is used to initialize the driver on the basis of given browser name
-	 * @param BrowserName
-	 * @return driver 
-	 */
+	
 	public WebDriver init_Driv(Properties prop ) {
 		
 	
@@ -76,10 +72,7 @@ public class BasePage {
 	public static synchronized WebDriver getDriver(){
 		return TLDriver.get();
 	}
-	/**
-	 * This method is used to initialize config properties
-	 * @return prop
-	 */
+	
 	public Properties init_Prop() {
 		prop = new Properties();
 		String path = null;
@@ -120,7 +113,7 @@ public class BasePage {
 	
 	
 	
-	//take Screenshot
+
 	public String getScreenshot() {
 		
 	File src=	((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
