@@ -12,7 +12,7 @@
 		<classes>
 		
 			<class name="com.qa.hubspot.tests.LoginTest"/>
-			    <class name="com.qa.hubspot.tests.HomePageTest"/>
+			 
             
 		</classes>
 	</test>

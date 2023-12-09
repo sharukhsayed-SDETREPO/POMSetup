@@ -17,7 +17,7 @@ public class HomePageClass extends BasePage {
 	//
 	private WebDriver driver;
 	
-	ElementUtil elementutil;
+	public ElementUtil elementutil;
 	
 	
 	public HomePageClass(WebDriver driver) {
