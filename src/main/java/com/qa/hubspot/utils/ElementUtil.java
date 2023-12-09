@@ -132,53 +132,53 @@ public class ElementUtil extends BasePage {
 	
 	//***************************wait utils ******************************
 	public String doGetPageTitleWithContains(int timeOut, String title) {
-		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(timeOut));
 		wait.until(ExpectedConditions.titleContains(title));
 		return driver.getTitle();
 	}
 
 	public String doGetPageTitleWithIsTitle(int timeOut, String title) {
-		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(timeOut));
 		wait.until(ExpectedConditions.titleIs(title));
 		return driver.getTitle();
 	}
 	
 	public String doGetPageCurrentUrl(int timeOut, String urlValue) {
-		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(timeOut));
 		wait.until(ExpectedConditions.urlContains(urlValue));
 		return  driver.getCurrentUrl();
 	}
 	
 	public WebElement waitForElementPresent(By locator, int timeOut){
-		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(timeOut));
 		return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 	}
 	
 	public WebElement waitforelementtobevisible(By locator, int timeOut){
 		getElement(locator);
-		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(timeOut));
 		return wait.until(ExpectedConditions.visibilityOf(getElement(locator)));
 	}
 	
 	public List<WebElement> waitforelementstobevisible(By locator, int timeOut){
 		getElement(locator);
-		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(timeOut));
 		return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
 	}
 	
 	public WebElement waitForElementToBeClickable(By locator, int timeOut){
-		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(timeOut));
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 	
 	public void  ClickWhenReady(By locator, int timeOut){
-		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(timeOut));
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();;
 	}
 	
 	
 	public Alert WaitforAlert(int timeoute) {
-		WebDriverWait waot= new WebDriverWait(driver,timeoute);
+		WebDriverWait waot= new WebDriverWait(driver, Duration.ofSeconds(timeoute));
 		
 		return waot.until(ExpectedConditions.alertIsPresent());
 		
