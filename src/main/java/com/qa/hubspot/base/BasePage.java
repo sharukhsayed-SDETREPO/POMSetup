@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -37,7 +38,7 @@ public class BasePage {
 	 */
 	public WebDriver init_Driv(Properties prop ) {
 		
-		//OP=new OptionsManager(prop);
+	
 		
 		
 		
@@ -64,7 +65,7 @@ public class BasePage {
 		}
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().window().maximize();
-		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		getDriver().get(prop.getProperty("url"));
 		return getDriver();
 		

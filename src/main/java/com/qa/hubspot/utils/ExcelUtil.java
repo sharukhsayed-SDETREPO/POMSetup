@@ -26,7 +26,7 @@ public class ExcelUtil {
 			book =WorkbookFactory.create(ip);
 			sheet=book.getSheet(SheetName);
 			
-			data=new String[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
+			data=new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
 			
 			
 			for (int i=0;i<sheet.getLastRowNum();i++) {
