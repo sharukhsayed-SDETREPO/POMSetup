@@ -3,9 +3,9 @@
 
 <suite name="Hub spot Test automtion regression suite" thread-count="3" parallel="tests" verbose="3">
 	<listeners>
-	
+<!-- 	
 		 <listener class-name="com.qa.hubspot.testlisteners.ExtentReportListener" />
-			<listener class-name="com.qa.hubspot.testlisteners.pdfListener" /> 
+			<listener class-name="com.qa.hubspot.testlisteners.pdfListener" />  -->
 					<listener class-name="com.qa.hubspot.testlisteners.TestAllureListener" /> 
  </listeners>
 	<test name="HubSpot Feature Testing">
