@@ -89,7 +89,6 @@ public class BasePage {
 		try {
 			TLDriver.set(new RemoteWebDriver(new URL(prop.getProperty("huburl")),croopt));
 		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		}
@@ -160,7 +159,6 @@ public class BasePage {
 		try {
 			FileUtils.copyFile(src, dest);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

@@ -32,7 +32,7 @@ public class HomePageTest extends BaseTest {
 	
 	@Description("this will get your homepagetitle ")
 	@Severity(SeverityLevel.CRITICAL) 
-	public void verfyHomePageTitle() throws InterruptedException  {
+	public void verfyHomePageTitle()   {
 		System.out.println("HOME PAGE TITLE IS " +homepageclass.doGetTitleHomePage());
 		Assert.assertEquals(homepageclass.doGetTitleHomePage(), Constants.HOME_PAGE_TITLE);
 	}
@@ -53,7 +53,7 @@ public class HomePageTest extends BaseTest {
 	
 	public void verfyLoggedInAccount() {
 		System.out.println("HOME PAGE Logged in account IS" +homepageclass.doGetLoggedinAccount());
-		Assert.assertEquals(homepageclass.doGetLoggedinAccount(),prop.getProperty("accountName"));
+		Assert.assertEquals(homepageclass.doGetLoggedinAccount(),prop.getProperty("accountName").trim());
 	}
 	
 	

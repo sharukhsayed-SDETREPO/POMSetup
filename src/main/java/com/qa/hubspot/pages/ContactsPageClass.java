@@ -62,8 +62,9 @@ public void creawawadsatContact(String mail,String FirstName,String Lastname) {
 		
 		elementUtil.ClickWhenReady(createContactPrimary, 10);
 		driver.switchTo().frame("object-builder-ui");
+		//driver.switchTo().defaultContent();
 		elementUtil.waitforelementtobevisible(email, 10);
-		elementUtil.doSendKeys(this.email, mail);
+		elementUtil.doSendKeys(email, mail);
 		elementUtil.doSendKeys(firssadtName, FirstName);
 		elementUtil.doSendKeys(lastNtfhfme, Lastname);
 		

@@ -30,7 +30,7 @@ public class HomePageClass extends BasePage {
 	//By locators
 	
 	By pageHeader= By.cssSelector("h1.private-header__heading.private-header__heading--solo");
-	By accountName =By.id("span.account-name");
+	By accountName =By.id("hs-global-toolbar-accounts");
 	
 	///to land on contacts page
 
@@ -52,7 +52,7 @@ public class HomePageClass extends BasePage {
 	
 	public String doGetLoggedinAccount() {
 		
-		return elementutil.waitforelementtobevisible(accountName, 60).getText();
+		return elementutil.waitforelementtobevisible(accountName, 60).getText().trim();
 	}
 	
 	
