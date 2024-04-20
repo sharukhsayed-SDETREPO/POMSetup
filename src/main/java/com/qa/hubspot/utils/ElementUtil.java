@@ -45,7 +45,7 @@ public class ElementUtil extends BasePage {
 			}
 			
 		} catch (Exception e) {
-			System.out.println("element could not be created..." + locator);
+			System.out.println("element could not be created... WITH LOCATOR " + locator);
 		}
 
 		return element;
@@ -97,7 +97,7 @@ public class ElementUtil extends BasePage {
 	}
 	
 	public List<String> getDropDownOptionsValues(By locator) {
-		List<String> optionsList = new ArrayList<String>();
+		List<String> optionsList = new ArrayList<>();
 
 		Select select = new Select(getElement(locator));
 
