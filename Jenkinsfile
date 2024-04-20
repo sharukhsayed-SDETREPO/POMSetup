@@ -18,6 +18,34 @@ pipeline {
       }
     }
 
+
+
+    stage('Publish Allure Reports for Sanity') {
+           steps {
+                script {
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: '/allure-results']]
+                    ])
+                }
+            }
+        }
+        
+        
+        	stage('Publish  Extent Report for Sanity'){
+            steps{
+                     publishHTML([allowMissing: false,
+                                  alwaysLinkToLastBuild: false, 
+                                  keepAll: false, 
+                                  reportDir: 'reports', 
+                                  reportFiles: 'APIExecutionReport.html', 
+                                  reportName: 'API HTML Regression Extent Report Sanity', 
+                                  reportTitles: ''])
+            }
+        } 
     stage('Build QA') {
       parallel {
         stage('Build QA') {
